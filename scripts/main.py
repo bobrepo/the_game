@@ -13,7 +13,7 @@ while True:
         if e.type == pygame.QUIT:
             pygame.quit()
 
-    scrn.fill((255, 0, 255))
+    scrn.fill((0, 0, 0 ))
 
     pygame.display.flip()
     clk.tick(60)

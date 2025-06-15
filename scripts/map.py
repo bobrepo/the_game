@@ -1,3 +1,5 @@
+m = list()
+
 m1 = [
     "                     ",
     "                     ",
@@ -6,6 +8,13 @@ m1 = [
     "     o               ",
     "                     ",
     "                     ",
+    "                     ",
+    "                     ",
+    "                     ",
+    "                     ",
+    "                     ",
+    "                     ",
     "xxxxxxxxxxxxxxxxxxxxx",
     "xxxxxxxxxxxxxxxxxxxxx",
 ]
+m.append(m1)

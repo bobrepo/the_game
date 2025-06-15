@@ -1,6 +1,6 @@
 import pygame
 import settings
-import player
+import levels
 
 pygame.init()
 
@@ -8,8 +8,8 @@ scrn = pygame.display.set_mode((settings.screen_width, settings.screen_height))
 pygame.display.set_caption("test")
 
 clk = pygame.time.Clock()
-se = pygame.sprite.Group()
-se.add(player.play((23, 23)))
+levl = levels.buildmap(0, scrn)
+
 
 while True:
     for e in pygame.event.get():
@@ -18,8 +18,7 @@ while True:
 
     scrn.fill((0, 0, 0))
 
-    se.update()
-    se.draw(scrn)
+    levl.run()
 
     pygame.display.flip()
     clk.tick(60)

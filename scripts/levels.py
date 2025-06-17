@@ -25,7 +25,7 @@ class buildmap:
                 elif char == "o":
                     y = settings.tile_x * i
                     x = settings.tile_y * j
-                    p = player.play((x, y))
+                    p = player.Player((x, y))
                     self.pplayer.add(p)
 
     def run(self):

@@ -32,5 +32,5 @@ class buildmap:
         self.block.update(0, 0)
         self.block.draw(self.surface)
 
-        self.pplayer.update()
+        self.pplayer.update(self.block)
         self.pplayer.draw(self.surface)

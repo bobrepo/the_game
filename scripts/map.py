@@ -17,11 +17,11 @@ m1 = [
     "                     ",
     "                     ",
     "                     ",
-    "                     ",
-    "              x       ",
-    "                     ",
-    "g g g g   gggx gg    ",
-    "xxxxxxxxxxxxdxxxxxxxx",
-    "ddddddddddddddddddddd",
+    "                    ",
+    "                   ",
+    "                   ",
+    "xg g g g   ggg  gg   g     g  g gg g         g       g",
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "dddddddddddddddddddddddddddddddddddddddddddddddddddddd",
 ]
 m.append(m1)

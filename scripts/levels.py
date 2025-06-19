@@ -20,7 +20,12 @@ class buildmap:
                 if char == "x":
                     y = settings.tile_x * i
                     x = settings.tile_y * j
-                    t = Tile.tile((x, y))
+                    t = Tile.grass((x, y))
+                    self.block.add(t)
+                elif char == "d":
+                    y = settings.tile_x * i
+                    x = settings.tile_y * j
+                    t = Tile.dirt((x, y))
                     self.block.add(t)
                 elif char == "o":
                     y = settings.tile_x * i

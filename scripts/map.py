@@ -18,10 +18,10 @@ m1 = [
     "                     ",
     "                     ",
     "                     ",
-    "                     ",
+    "              x       ",
     "                     ",
     "            x        ",
-    "xxxxxxxxxxxxxxxxxxxxx",
-    "xxxxxxxxxxxxxxxxxxxxx",
+    "xxxxxxxxxxxxdxxxxxxxx",
+    "ddddddddddddddddddddd",
 ]
 m.append(m1)

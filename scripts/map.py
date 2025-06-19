@@ -20,7 +20,7 @@ m1 = [
     "                     ",
     "                     ",
     "                     ",
-    "            x         ",
+    "            x        ",
     "xxxxxxxxxxxxxxxxxxxxx",
     "xxxxxxxxxxxxxxxxxxxxx",
 ]

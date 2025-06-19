@@ -4,7 +4,7 @@ import pygame
 class grass(pygame.sprite.Sprite):
     def __init__(self, pos):
         super().__init__()
-        self.image = pygame.image.load("../sprites/grass.png")
+        self.image = pygame.image.load("sprites/blocks/grass.png")
         self.rect = self.image.get_rect(topleft=pos)
 
     def update(self, x, y):
@@ -15,7 +15,7 @@ class grass(pygame.sprite.Sprite):
 class dirt(pygame.sprite.Sprite):
     def __init__(self, pos):
         super().__init__()
-        self.image = pygame.image.load("../sprites/dirt.png")
+        self.image = pygame.image.load("sprites/blocks/dirt.png")
         self.rect = self.image.get_rect(topleft=pos)
 
     def update(self, x, y):
@@ -29,7 +29,7 @@ class dirt(pygame.sprite.Sprite):
 class grass_leaf(pygame.sprite.Sprite):
     def __init__(self, pos):
         super().__init__()
-        self.image = pygame.image.load("../sprites/bush.png")
+        self.image = pygame.image.load("sprites/entity/bush.png")
         self.rect = self.image.get_rect(topleft=pos)
 
     def update(self, x, y):

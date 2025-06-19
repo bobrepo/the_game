@@ -20,7 +20,7 @@ m1 = [
     "                     ",
     "              x       ",
     "                     ",
-    "            x        ",
+    "g g g g   gggx gg    ",
     "xxxxxxxxxxxxdxxxxxxxx",
     "ddddddddddddddddddddd",
 ]

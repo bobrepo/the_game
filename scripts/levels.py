@@ -14,6 +14,7 @@ class buildmap:
     def create_map(self, num):
         map = mapp.m[num]
         self.block = pygame.sprite.Group()
+        self.entity = pygame.sprite.Group()
         self.pplayer = pygame.sprite.GroupSingle()
         for i, stringg in enumerate(map):
             for j, char in enumerate(stringg):
@@ -32,6 +33,11 @@ class buildmap:
                     x = settings.tile_y * j
                     p = player.Player((x, y))
                     self.pplayer.add(p)
+                elif char == "g":
+                    y = settings.tile_x * i
+                    x = settings.tile_y * j
+                    e = Tile.grass_leaf((x, y))
+                    self.entity.add(e)
 
     def run(self):
         self.block.update(0, 0)
@@ -39,3 +45,6 @@ class buildmap:
 
         self.pplayer.update(self.block)
         self.pplayer.draw(self.surface)
+
+        self.entity.update(0, 0)
+        self.entity.draw(self.surface)

@@ -13,8 +13,7 @@ class Player(pygame.sprite.Sprite):
         self.jump_force = -15
         self.gravity_force = 1
         self.on_ground = False
-        
-        
+
     def mov(self):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_d]:

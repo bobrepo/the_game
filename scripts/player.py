@@ -4,10 +4,11 @@ import pygame
 class Player(pygame.sprite.Sprite):
     def __init__(self, pos):
         super().__init__()
-        self.image = pygame.Surface((64, 64))
-        self.image.fill((255, 255, 255))
+        self.image = pygame.image.load("sprites/panda/panda_player.png")
+        # self.image.fill((255, 255, 255))
         self.rect = self.image.get_rect(center=pos)
 
+        self.is_moving = False
         self.speed = 6
         self.direction = pygame.math.Vector2(0, 0)
         self.jump_force = -15
@@ -18,10 +19,13 @@ class Player(pygame.sprite.Sprite):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_d]:
             self.direction.x = 1
+            self.is_moving = True
         elif keys[pygame.K_a]:
             self.direction.x = -1
+            self.is_moving = True
         else:
             self.direction.x = 0
+            self.is_moving = False
 
         if keys[pygame.K_w] and self.on_ground:
             self.jump()
@@ -38,6 +42,7 @@ class Player(pygame.sprite.Sprite):
     def collision_horizontal(self, blocks):
         for block in blocks:
             if self.rect.colliderect(block):
+                self.is_moving = False
                 if self.direction.x == 1:
                     self.rect.right = block.rect.left
                     self.direction.x = 0

@@ -9,6 +9,8 @@ class buildmap:
     def __init__(self, map_no, seu):
         self.map_no = map_no
         self.surface = seu
+        self.utex = 0
+        self.utey = 0
         self.create_map(map_no)
 
     def create_map(self, num):
@@ -39,12 +41,27 @@ class buildmap:
                     e = Tile.grass_leaf((x, y))
                     self.entity.add(e)
 
+    def scroll(self, pla):
+        for pal in pla:
+            print(pal.rect.x)
+
+            if pal.rect.x >= 1100 and pal.is_moving:
+                self.utex = -1
+                pal.speed = 0
+            elif pal.rect.x <= 100 and pal.is_moving:
+                self.utex = 1
+                pal.speed = 0
+            else:
+                self.utex = 0
+                pal.speed = 6
+
     def run(self):
-        self.block.update(0, 0)
+        self.block.update(self.utex, self.utey)
         self.block.draw(self.surface)
 
         self.pplayer.update(self.block)
         self.pplayer.draw(self.surface)
+        self.scroll(self.pplayer)
 
-        self.entity.update(0, 0)
+        self.entity.update(self.utex, self.utey)
         self.entity.draw(self.surface)

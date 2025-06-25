@@ -43,13 +43,11 @@ class buildmap:
 
     def scroll(self, pla):
         for pal in pla:
-            print(pal.rect.x)
-
             if pal.rect.x >= 1100 and pal.is_moving:
-                self.utex = -1
+                self.utex = -4
                 pal.speed = 0
-            elif pal.rect.x <= 100 and pal.is_moving:
-                self.utex = 1
+            elif pal.rect.x <= 200 and pal.is_moving:
+                self.utex = 4
                 pal.speed = 0
             else:
                 self.utex = 0

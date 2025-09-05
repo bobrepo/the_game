@@ -1,3 +1,6 @@
+import operator
+
+
 class ball:
     def __init__(self):
         self.pyy()
@@ -24,7 +27,18 @@ def check(x):
         return "o"
 
 
+print("hello, world!")
 ar = ["    a  b"]
 for i, x in enumerate(ar[0]):
     ab = check(x)
     print(ab, i)
+
+
+acv = [10, 109]
+va = [10, 19]
+# res = lambda[x-y for x, y in zip(acv,[10,20])]
+
+res = list(map(operator.sub, acv, va))
+
+
+print(res, " this is a result")

@@ -41,25 +41,30 @@ class buildmap:
                     e = Tile.grass_leaf((x, y))
                     self.entity.add(e)
 
-    def scroll(self, pla):
-        for pal in pla:
-            if pal.rect.x >= 1100 and pal.is_moving:
-                self.utex = -4
-                pal.speed = 0
-            elif pal.rect.x <= 200 and pal.is_moving:
-                self.utex = 4
-                pal.speed = 0
-            else:
-                self.utex = 0
-                pal.speed = 6
+    #
+    #    def scroll(self, pla):
+    #        for pal in pla:
+    #            if pal.rect.x > 1100 and pal.is_moving:
+    #                self.utex = -3
+    #                pal.speed = 0
+    #            elif pal.rect.x < 200 and pal.is_moving:
+    #                self.utex = 3
+    #                pal.speed = 0
+    #            else:
+    #                self.utex = 0
+    #                pal.speed = 3
+    #
+    #            return pal.speed
+    def camera_move(self, player):
+        pass
 
     def run(self):
         self.block.update(self.utex, self.utey)
         self.block.draw(self.surface)
 
+        self.camera_move(self.pplayer)
         self.pplayer.update(self.block)
         self.pplayer.draw(self.surface)
-        self.scroll(self.pplayer)
 
         self.entity.update(self.utex, self.utey)
         self.entity.draw(self.surface)
